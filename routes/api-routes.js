@@ -20,7 +20,7 @@ module.exports = function (app) {
   });
 
   // Devour burger
-  app.put("/api/burgers/:id", function (req, res) {
+  app.put("/api/burger/:id", function (req, res) {
     db.Burger.findOne({
       where: {
         id: req.params.id
