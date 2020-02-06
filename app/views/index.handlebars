@@ -1,0 +1,38 @@
+<div class="row justify-content-center">
+    <h1>Eat-Da-Burger</h1>
+</div>
+
+<div class="row justify-content-center">
+    <!-- burger img -->
+    <img src="https://png2.cleanpng.com/sh/0b5cc8e776393f3c0d3cd7382d374290/L0KzQYm3UsA0N5R8j5H0aYP2gLBuTfhidZN6itlucj3meLbskBVjfaNsfeQ2dnXqd7rsTfJ2ephqip9sYYL3f7F1TfNtcaEyeud7Z3X1g37qjPlxaaN5i58AYUe5RYq8V8Nma2JmSZC5OUC8QIeAVME2OWg8SKcANUm1RYi4TwBvbz==/kisspng-hamburger-cheeseburger-veggie-burger-cartoon-clip-burgers-cliparts-5a7659573ec1a1.0909067415177055592571.png"
+        class="img-fluid  ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="Burger"
+        style="max-width: 10%">
+</div>
+<div class="row">
+    <ul class="burger-list">
+        {{#each burger}}
+        {{#unless devoured}}
+        <li>
+            {{burger_type}}
+            <button class="eat-burger" data-id={{id}}>Eat Da Burger!</button>
+        </li>
+        {{/unless}}
+        {{/each}}
+    </ul>
+    <ul class="devoured-list">
+        {{#each burger}}
+        {{#if devoured}}
+        <li>
+            {{burger_type}}
+        </li>
+        {{/unless}}
+        {{/each}}
+    </ul>
+</div>
+<div class="form-group">
+    <label for=""></label>
+    <textarea class="form-control offset-5 col-2" name="" id="" rows="3"></textarea>
+</div>
+<div class="row justify-content-center">
+    <button type="submit" class="btn btn-primary">Create Burger</button>
+</div>
