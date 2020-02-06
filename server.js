@@ -1,6 +1,6 @@
 let express = require("express");
 let exphbs = require("express-handlebars");
-let db = require("./app/models");
+let db = require("./models");
 
 // Sets up the Express App
 // =============================================================
@@ -16,11 +16,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Static directory
-app.use(express.static("./app/public"));
+app.use(express.static("./public"));
 
 // Routes
 // =============================================================
-require("./app/routes/api-routes.js")(app);
+require("./routes/api-routes.js")(app);
 // require("./app/routes/html-routes.js")(app);
 
 // Starts the server to begin listening
