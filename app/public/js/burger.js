@@ -1,4 +1,4 @@
-$(".burger-list").on("click", function (event) {
+$(".eat-burger").on("click", function (event) {
     event.preventDefault();
     let newBurger = {
         burger_type: $("#burger").val().trim(),
@@ -22,6 +22,6 @@ $(".devoured-list").on("click", function (event) {
             type:"PUT",
             data: eaten,
         }).then(function(){
-            locaiton.reload();
+            location.reload();
         })
 })
