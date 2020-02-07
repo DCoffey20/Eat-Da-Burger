@@ -1,10 +1,11 @@
-$(".eat-burger").on("click", function (event) {
+$(".new-burger").on("click", function (event) {
     event.preventDefault();
     let newBurger = {
-        burger_type: $("#burger").val().trim(),
+        burger_type: $("#burg").val().trim(),
         devoured: false
     }
-    $.ajax("/api/burger"{
+    console.log(newBurger);
+    $.ajax("/api/burger",{
         type: "POST",
         data: newBurger,
     }).then(function () {
@@ -12,7 +13,7 @@ $(".eat-burger").on("click", function (event) {
     })
 });
 
-$(".devoured-list").on("click", function (event) {
+$(".eat-burger").on("click", function (event) {
     event.preventDefault();
     let id = $(this).data("id");
     let eaten = {

@@ -5,6 +5,7 @@ module.exports = function (app) {
   // Get existing burgers from database
   app.get("/", function (req, res) {
     db.Burger.findAll({}).then(function (results) {
+      // console.log(results);
       res.render("index", { burger: results });
     });
   });
@@ -21,14 +22,14 @@ module.exports = function (app) {
 
   // Devour burger
   app.put("/api/burger/:id", function (req, res) {
-    db.Burger.findOne({
+    console.log(req.params.id);
+    db.Burger.update({
+      devoured: true,
+    },{
       where: {
         id: req.params.id
       }
-    }).then(function (results) {
-      results.update({
-        devoured: req.body.devoured
-      });
+    }).then(function () {
       res.status(200).end();
     });
   });
