@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "dylan",
-    "password": "hockey_rules",
-    "database": "eat_da_burger",
-    "host": "127.0.0.1",
+    "username": "yw07os203ukfqjki",
+    "password": "r6d0hjditkfjn0t7",
+    "database": "uc4eya2f5c42318m",
+    "host": "rtzsaka6vivj2zp1.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql",
     "operatorsAliases": false
   },
@@ -18,10 +18,9 @@
   "production": {
     "username": "yw07os203ukfqjki",
     "password": "r6d0hjditkfjn0t7",
-    "database": "eat_da_burger",
+    "database": "uc4eya2f5c42318m",
     "host": "rtzsaka6vivj2zp1.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql",
     "operatorsAliases": false
-    // "use_env_variable":"JAWSDB_URL"
   }
 }
